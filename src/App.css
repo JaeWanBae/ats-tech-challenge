@@ -1,38 +1,171 @@
-.App {
-  text-align: center;
+/* general styling */
+
+html {
+    font-size: 125%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+ul li {
+    list-style: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1,
+h2,
+h3 {
+    margin: 0;
+    padding: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h1,
+h2,
+.formBoxOne,
+.formBoxTwo,
+.csvContainer,
+.search {
+    text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.search {
+    margin-bottom: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1 {
+    padding-top: 50px;
+}
+
+h2 {
+    margin-bottom: 30px;
+}
+
+/* CSVReader Styling */
+.csvContainer {
+    margin: 50px auto;
+}
+
+/* filter styling */
+.checkbox {
+    position: fixed;
+    bottom: 0;
+    border: 1px solid black;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 10px 10px;
+    grid-template-areas:
+    "checkbox0 checkbox1 checkbox2 checkbox3 checkbox4 checkbox5"
+    "checkbox6 checkbox7 checkbox8 checkbox9 checkbox10 checkbox11"
+    "checkbox12 checkbox13 checkbox14 checkbox15 . .";
+    background-color: rgba(255, 255, 255);
+}
+
+.checkbox0 { 
+    grid-area: checkbox0;
+    position: relative;
+}
+.checkbox1 { 
+    grid-area: checkbox1; 
+}
+.checkbox2 { 
+    grid-area: checkbox2; 
+}
+.checkbox3 { 
+    grid-area: checkbox3; 
+}
+.checkbox4 { 
+    grid-area: checkbox4; 
+}
+.checkbox5 { 
+    grid-area: checkbox5; 
+}
+.checkbox6 { 
+    grid-area: checkbox6; 
+}
+.checkbox7 { 
+    grid-area: checkbox7; 
+}
+.checkbox8 { 
+    grid-area: checkbox8; 
+}
+.checkbox9 { 
+    grid-area: checkbox9; 
+}
+.checkbox10 { 
+    grid-area: checkbox10; 
+}
+.checkbox11 { 
+    grid-area: checkbox11; 
+}
+.checkbox12 { 
+    grid-area: checkbox12; 
+}
+.checkbox13 { 
+    grid-area: checkbox13; 
+}
+.checkbox14 { 
+    grid-area: checkbox14; 
+}
+.checkbox15 {
+    grid-area: checkbox15;
+}
+
+.fa-chevron-right,
+.fa-chevron-left {
+    position: absolute;
+    right: -50px;
+    top: 35%;
+    font-size: 2rem;
+}
+
+.fa-chevron-right:hover,
+.fa-chevron-left:hover,
+.fa-chevron-right:focus,
+.fa-chevron-left:focus {
+    cursor: pointer;
+    transform:scale(1.5);
+}
+/* Table Styling */
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+td {
+    font-size: 0.8rem;
+}
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+
+/* pagination buttons */
+
+.paginationBox {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    width: 80%;
+    align-items: baseline;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+
+
+/* animation */
+
+.hideLegend {
+    transition: transform ease-out 0.5s;
+    transform: translateX(0);
+}
+
+.showLegend {
+    transition: transform ease-in 0.5s;
+    transform: translateX(-100%);
 }
